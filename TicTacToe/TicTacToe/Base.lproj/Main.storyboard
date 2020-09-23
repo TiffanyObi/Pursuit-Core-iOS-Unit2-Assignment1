@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,13 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="408-4082814_random-tic-tac-toe-board-information" translatesAutoresizingMaskIntoConstraints="NO" id="dSr-hf-Mbt">
-                                <rect key="frame" x="0.0" y="109" width="414" height="396"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="408-4082814_random-tic-tac-toe-board-information" translatesAutoresizingMaskIntoConstraints="NO" id="dSr-hf-Mbt">
+                                <rect key="frame" x="0.0" y="109" width="414" height="400"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRJ-4o-LkW" userLabel="tag0" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRJ-4o-LkW" userLabel="tag0" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
                                 <rect key="frame" x="30" y="130" width="102" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="LpX-85-o1p"/>
+                                    <constraint firstAttribute="height" constant="103" id="Orv-70-8Mt"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="row">
@@ -36,9 +38,12 @@
                                     <action selector="switchPlayersTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAd-SR-vTM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAA-hb-vYk" userLabel="tag3" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAA-hb-vYk" userLabel="tag3" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
                                 <rect key="frame" x="30" y="257" width="102" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="o1h-zU-TGG"/>
+                                    <constraint firstAttribute="width" constant="102" id="y0W-IJ-Fzj"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="row">
@@ -52,9 +57,12 @@
                                     <action selector="switchPlayersTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CBD-S3-bEL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFG-Ud-BiU" userLabel="tag6" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="30" y="381" width="102" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFG-Ud-BiU" userLabel="tag6" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="30" y="384" width="102" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="PI7-NL-3XW"/>
+                                    <constraint firstAttribute="height" constant="103" id="Zxu-jM-szw"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="row">
@@ -68,9 +76,12 @@
                                     <action selector="switchPlayersTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wr2-UI-m3m"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKo-Ac-XIJ" userLabel="tag1" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="156" y="131" width="102" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKo-Ac-XIJ" userLabel="tag1" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="156" y="130" width="102" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="0E7-2u-RE5"/>
+                                    <constraint firstAttribute="width" constant="102" id="zeD-Tg-ShA"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="row">
@@ -84,9 +95,12 @@
                                     <action selector="switchPlayersTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HFJ-NB-C1t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouy-cw-aju" userLabel="tag4" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="156" y="258" width="102" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouy-cw-aju" userLabel="tag4" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="156" y="257" width="102" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="G1m-0b-Uk1"/>
+                                    <constraint firstAttribute="width" constant="102" id="GKA-wp-Fex"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="row">
@@ -100,9 +114,12 @@
                                     <action selector="switchPlayersTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fIi-eZ-sS4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8q7-Tq-lVr" userLabel="tag7" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="156" y="382" width="102" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8q7-Tq-lVr" userLabel="tag7" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="156" y="384" width="102" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="jUD-wN-hT9"/>
+                                    <constraint firstAttribute="height" constant="103" id="zZm-wf-Yvb"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="row">
@@ -116,9 +133,12 @@
                                     <action selector="switchPlayersTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q9y-iE-Nbf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS5-WE-pIT" userLabel="tag2" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="283" y="132" width="102" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS5-WE-pIT" userLabel="tag2" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="283" y="130" width="102" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="SiR-Jb-gaf"/>
+                                    <constraint firstAttribute="width" constant="102" id="hkc-p9-yUI"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="row">
@@ -132,9 +152,12 @@
                                     <action selector="switchPlayersTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kmH-Wp-9CO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li7-41-yeR" userLabel="tag5" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="283" y="259" width="102" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li7-41-yeR" userLabel="tag5" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="283" y="257" width="102" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="LCT-uP-bfJ"/>
+                                    <constraint firstAttribute="width" constant="102" id="QEe-6x-MCR"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="row">
@@ -148,9 +171,12 @@
                                     <action selector="switchPlayersTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="brv-77-Y4J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPQ-HS-hZR" userLabel="tag8" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="283" y="383" width="102" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPQ-HS-hZR" userLabel="tag8" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="283" y="384" width="102" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="alk-O9-JDI"/>
+                                    <constraint firstAttribute="height" constant="103" id="uZf-vu-mjE"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="row">
@@ -164,25 +190,114 @@
                                     <action selector="switchPlayersTurn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hbf-hH-rEn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="playerTurn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojf-pq-s6I">
-                                <rect key="frame" x="71" y="542" width="251" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojf-pq-s6I">
+                                <rect key="frame" x="70" y="539" width="274" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3Cf-VT-Chh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.38496607542037964" green="0.067388556897640228" blue="0.84022039175033569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome To TIC TAC TOE!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHs-xM-KmH">
-                                <rect key="frame" x="20" y="56" width="365" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To TIC TAC TOE!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHs-xM-KmH">
+                                <rect key="frame" x="20" y="64" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 = 0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2G-g7-3JR">
+                                <rect key="frame" x="144.5" y="599" width="125.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2 = 0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2H-gY-uaE">
+                                <rect key="frame" x="143" y="649" width="128.5" height="30"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIc-zZ-JNw">
+                                <rect key="frame" x="147" y="709" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FGE-KN-VLy"/>
+                                    <constraint firstAttribute="width" constant="120" id="xUj-dx-ew5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="tintColor" red="0.39668488499999999" green="0.88241928820000004" blue="0.86667221780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qDu-jX-eqa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAo-qH-NvS">
+                                <rect key="frame" x="140" y="812" width="134" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HRT-up-t5v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.95794719457626343" green="0.0014963850844651461" blue="0.99210673570632935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="R E S E T "/>
+                                <connections>
+                                    <action selector="resetGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="shm-Vc-Fd8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qRJ-4o-LkW" firstAttribute="top" secondItem="vHs-xM-KmH" secondAttribute="bottom" constant="36" id="1aJ-1a-VEg"/>
+                            <constraint firstItem="Ouy-cw-aju" firstAttribute="leading" secondItem="uAA-hb-vYk" secondAttribute="trailing" constant="24" id="2N0-Hw-11J"/>
+                            <constraint firstItem="uAA-hb-vYk" firstAttribute="top" secondItem="qRJ-4o-LkW" secondAttribute="bottom" constant="24" id="3Ea-kE-1ag"/>
+                            <constraint firstItem="I2G-g7-3JR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4zp-uJ-zoo"/>
+                            <constraint firstItem="dSr-hf-Mbt" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.446429" id="6DO-Rg-31r"/>
+                            <constraint firstItem="lKo-Ac-XIJ" firstAttribute="top" secondItem="vHs-xM-KmH" secondAttribute="bottom" constant="36" id="6Sc-ok-j0D"/>
+                            <constraint firstItem="tAo-qH-NvS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8M7-my-AwE"/>
+                            <constraint firstItem="CPQ-HS-hZR" firstAttribute="top" secondItem="Li7-41-yeR" secondAttribute="bottom" constant="24" id="9wc-dz-WPN"/>
+                            <constraint firstItem="CPQ-HS-hZR" firstAttribute="leading" secondItem="8q7-Tq-lVr" secondAttribute="trailing" constant="25" id="ANG-N8-LBY"/>
+                            <constraint firstItem="hS5-WE-pIT" firstAttribute="top" secondItem="vHs-xM-KmH" secondAttribute="bottom" constant="36" id="BOs-jP-Bex"/>
+                            <constraint firstItem="dIc-zZ-JNw" firstAttribute="top" secondItem="C2H-gY-uaE" secondAttribute="bottom" constant="30" id="CBE-Kk-aKI"/>
+                            <constraint firstItem="Ojf-pq-s6I" firstAttribute="top" secondItem="dSr-hf-Mbt" secondAttribute="bottom" constant="30" id="E0k-TB-QWT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ojf-pq-s6I" secondAttribute="trailing" constant="70" id="Gqb-l9-QXB"/>
+                            <constraint firstItem="vHs-xM-KmH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GzB-rP-eDn"/>
+                            <constraint firstItem="Ouy-cw-aju" firstAttribute="top" secondItem="lKo-Ac-XIJ" secondAttribute="bottom" constant="24" id="PxT-Qw-fpD"/>
+                            <constraint firstItem="dSr-hf-Mbt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QO2-ZL-mO0"/>
+                            <constraint firstItem="Ojf-pq-s6I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="Qe0-tk-WU3"/>
+                            <constraint firstItem="uAA-hb-vYk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="RtI-lT-53d"/>
+                            <constraint firstItem="vHs-xM-KmH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="TRw-Px-muJ"/>
+                            <constraint firstItem="lKo-Ac-XIJ" firstAttribute="leading" secondItem="qRJ-4o-LkW" secondAttribute="trailing" constant="24" id="Tl9-Ik-5DZ"/>
+                            <constraint firstItem="I2G-g7-3JR" firstAttribute="top" secondItem="Ojf-pq-s6I" secondAttribute="bottom" constant="20" id="Uqh-Gl-DZC"/>
+                            <constraint firstItem="C2H-gY-uaE" firstAttribute="top" secondItem="I2G-g7-3JR" secondAttribute="bottom" constant="20" id="VaG-Z5-orJ"/>
+                            <constraint firstItem="Li7-41-yeR" firstAttribute="top" secondItem="hS5-WE-pIT" secondAttribute="bottom" constant="24" id="Wag-eg-GMm"/>
+                            <constraint firstItem="dIc-zZ-JNw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XlZ-fU-kUC"/>
+                            <constraint firstItem="aFG-Ud-BiU" firstAttribute="top" secondItem="uAA-hb-vYk" secondAttribute="bottom" constant="24" id="ZN0-OB-do7"/>
+                            <constraint firstItem="dSr-hf-Mbt" firstAttribute="top" secondItem="vHs-xM-KmH" secondAttribute="bottom" constant="15" id="aMD-pa-vGf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tAo-qH-NvS" secondAttribute="trailing" constant="140" id="duw-eu-0c0"/>
+                            <constraint firstItem="tAo-qH-NvS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="fEW-XY-Wtn"/>
+                            <constraint firstItem="Li7-41-yeR" firstAttribute="leading" secondItem="Ouy-cw-aju" secondAttribute="trailing" constant="25" id="iYT-Ft-mIR"/>
+                            <constraint firstItem="aFG-Ud-BiU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="jJh-55-0Vx"/>
+                            <constraint firstItem="dSr-hf-Mbt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="keq-hh-pG0"/>
+                            <constraint firstItem="qRJ-4o-LkW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="l8Y-ez-0F0"/>
+                            <constraint firstItem="hS5-WE-pIT" firstAttribute="leading" secondItem="lKo-Ac-XIJ" secondAttribute="trailing" constant="25" id="m2d-hC-pRC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vHs-xM-KmH" secondAttribute="trailing" constant="20" id="qEo-rB-YFD"/>
+                            <constraint firstItem="8q7-Tq-lVr" firstAttribute="leading" secondItem="aFG-Ud-BiU" secondAttribute="trailing" constant="24" id="qxH-xZ-RiL"/>
+                            <constraint firstItem="C2H-gY-uaE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zNo-vn-8LP"/>
+                            <constraint firstItem="8q7-Tq-lVr" firstAttribute="top" secondItem="Ouy-cw-aju" secondAttribute="bottom" constant="24" id="zr4-kg-p9T"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="button1" destination="qRJ-4o-LkW" id="1Mu-Pb-NBQ"/>
+                        <outlet property="button2" destination="lKo-Ac-XIJ" id="cNG-Ce-PuI"/>
+                        <outlet property="button3" destination="hS5-WE-pIT" id="Iyq-DZ-SDA"/>
+                        <outlet property="button4" destination="uAA-hb-vYk" id="7el-za-ltq"/>
+                        <outlet property="button5" destination="Ouy-cw-aju" id="n0d-Nj-bpS"/>
+                        <outlet property="button6" destination="Li7-41-yeR" id="PeC-Na-uqS"/>
+                        <outlet property="button7" destination="aFG-Ud-BiU" id="tTm-Be-jCv"/>
+                        <outlet property="button8" destination="8q7-Tq-lVr" id="19i-6Z-tqt"/>
+                        <outlet property="button9" destination="CPQ-HS-hZR" id="zUb-6Q-Ui9"/>
+                        <outlet property="player1ScoreLabel" destination="I2G-g7-3JR" id="3KP-iu-o6i"/>
+                        <outlet property="player2ScoreLabel" destination="C2H-gY-uaE" id="Hgm-mm-JmO"/>
                         <outlet property="playersTurn" destination="Ojf-pq-s6I" id="e1r-TO-LJ1"/>
                     </connections>
                 </viewController>
